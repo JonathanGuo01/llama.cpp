@@ -3563,7 +3563,7 @@ class JaisModel(Model):
         # note: For some JAIS flavors, output is tied to (same as) wte in original model
         self.output_is_wte = False
         if 'mup_embeddings_scale' in self.hparams:
-            self.output_is_wte = True   # Hack (?)
+            self.output_is_wte = False   # Hack (?)
             self.embeddings_scale = self.hparams['mup_embeddings_scale']
         elif 'embeddings_scale' in self.hparams:
             self.embeddings_scale = self.hparams['embeddings_scale']
